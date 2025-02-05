@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+.nav ul li i{
+  color: #F4A261;
+  font-size: 22px;
+}
+.logout-btn {
+  background-color: #F4A261; 
+  color: #1E140F; 
+  border: none;
+  padding: 7px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #E76F51; 
+  color: #FFFFFF;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logout-btn {
+    margin-top: 10px;
+  }
+}
+
+/* Main Styling */
+main {
+  /* background: #f8f9fa; */
+  padding: 20px;
+}
+
+.news-feed-container {
+  display: flex;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Section: Create Post */
+.create-post {
+  flex: 1;
+  background: #ffffff;
+  border: 5px solid rgb(253, 35, 1);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.create-post:hover {
+  transform: translateY(-5px);
+}
+
+.create-post h2 {
+  margin-bottom: 15px;
+  color: #1e1e2f;
+  font-size: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.post-btn {
+  background-color: #f4a261;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.post-btn:hover {
+  background-color: #e76f51;
+}
+
+/* Right Section: Posts */
+.posts-section {
+ border: 2px solid #300101;
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card h3 {
+  color: #1e1e2f;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-feed-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #b4dafb;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .name {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+header .profile .avatar img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #fff; /* Adds a white border around the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notifications {
+    margin: 80px 20px 20px; /* Adjusted for fixed header */
+}
+
+.notifications h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notifications h2 span {
+    font-size: 28px;
+}
+
+section {
+    padding: 20px 0;
+    /* background: linear-gradient(180deg, #557EB5, #BED8FD, #D6E3F5); */
+    min-height: calc(100vh - 80px); /* Accounts for fixed header */
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Fixed minimum width for cards */
+    gap: 20px;
+}
+
+.card {
+    margin-top: 10px;
+    background: linear-gradient(145deg, #4facfe, #00c6ff); /* Brighter gradient */
+    border-radius: 15px; /* Smoother corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 320px; /* Fixed width for cards */
+    height: 310px; /* Fixed height for consistent design */
+    margin-bottom: 15px;
+}
+
+.card .details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card .details p {
+    font-size: 16px;
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.card button {
+    background: #0066cc;
+    color: white;
+    border: none;
+    margin: auto;
+    width:60%;
+    padding: 12px 20px;
+    border-radius: 10px; /* More rounded button */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.card button:hover {
+    background: #004080;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .cards {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notifications h2 {
+        font-size: 20px;
+    }
+
+    .card button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

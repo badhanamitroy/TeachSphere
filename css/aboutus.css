@@ -1,0 +1,212 @@
+/* General Section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #1E140F;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #1E140F;
+    background: linear-gradient(180deg, #5A81B8, #C2D9F8);
+}
+
+/* top--> content--> left, right */
+/* Top section */
+.top{
+    min-height: 100vh;
+    padding: 20px;
+    height: fit-content;
+}
+.top .content{
+    margin: 5%;
+    display:flex;
+}
+.left p{
+    text-align: justify;
+    margin-top: 10px;
+}
+.left h2{
+    font-size: 30px;
+}
+.top .content .left,
+.top .content .right{
+    width: 50%;
+    align-content: center;
+    /* border: 3px solid #5555; */
+    /* justify-content: center; */
+}
+.top .content .right .righttop {
+    /* border: 2px solid #ff0404f5; */
+    justify-items: center;
+}
+.top .content .right .righttop img{
+    /* border: 2px solid #ff0404f5; */
+    width: 80%;
+    height: 40%;
+    max-height: 300px;
+    border-radius: 15px;
+    margin: 18px auto;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.top .content .right .rightbottom{
+    width:70%;
+    display: flex;
+    /* border: 3px solid red; */
+    margin:0 auto;
+}
+
+.top .content .right .rightbottom .rbleft, 
+.top .content .right .rightbottom .rbright{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    /* border: 3px solid black; */
+    text-align: center;
+}
+.card{
+ background: aliceblue;
+ border: 5px solid #5555;
+ border-radius: 10px;
+ margin:20px;
+ height: 100%;
+ align-content: center;
+}
+
+/* Team Section Styling */
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+    text-align: center;
+    border-top: 3px solid #5A81B8;
+}
+
+.team-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Team Cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.team-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.team-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.team-card .info {
+    padding: 20px;
+}
+
+.team-card h2 {
+    font-size: 1.5rem;
+    color: #1E140F;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-container h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Review Section Styling */
+.review-section {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #5A81B8, #C2D9F8);
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.review-container textarea, 
+.review-container input[type="email"],
+.review-container input[type="text"]{
+    width: 100%;
+    height: 100px;
+    border: 2px solid #5A81B8;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+    resize: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-container input[type="email"], .review-container input[type="text"]{
+    height: 20px;
+    font: 1em sans-serif;
+}
+
+.review-container textarea:focus,
+.review-container input[type="email"]:focus,
+.review-container input[type="text"]:focus {
+    outline: none;
+    border-color: #2A5A9B;
+    box-shadow: 0 0 8px rgba(42, 90, 155, 0.4);
+}
+
+button[type="submit"] {
+    background: #2A5A9B;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.review-btn:hover {
+    background: #1E4A7A;
+}
